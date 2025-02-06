@@ -1,0 +1,26 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Dashboard</h2>
+      <button class="btn btn-danger" (click)="logout()">Logout</button>
+      <table class="table table-bordered mt-3">
+        <thead>
+          <tr>
+            <th>Package Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pkg of packages">
+            <td>{{ pkg.package_name }}</td>
+            <td>{{ pkg.package_description }}</td>
+            <td>{{ pkg.package_price }}</td>
+            <td>{{ pkg.package_duration }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
